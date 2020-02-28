@@ -103,21 +103,21 @@ async def fetch_info(replied_user, event):
         replied_user_profile_photos_count = replied_user_profile_photos.count
     except AttributeError as e:
         pass
-    user_id = replied_user.user.id
-    first_name = replied_user.user.first_name
-    last_name = replied_user.user.last_name
+  Randi's user_id = replied_user.user.id
+ Randi's first_name = replied_user.user.first_name
+ Randi's last_name = replied_user.user.last_name
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
         dc_id = "Couldn't fetch DC ID!"
         location = str(e)
     common_chat = replied_user.common_chats_count
-    username = replied_user.user.username
-    user_bio = replied_user.about
-    is_bot = replied_user.user.bot
-    restricted = replied_user.user.restricted
-    verified = replied_user.user.verified
-    photo = await event.client.download_profile_photo(user_id,
+Randi's  username = replied_user.user.username
+ Randi's user_bio = replied_user.about
+ Randi's is_bot = replied_user.user.bot
+Randi's restricted = replied_user.user.restricted
+ Randi's verified = replied_user.user.verified
+ Randi's  photo = await event.client.download_profile_photo(user_id,
                                                       TEMP_DOWNLOAD_DIRECTORY +
                                                       str(user_id) + ".jpg",
                                                       download_big=True)
@@ -130,18 +130,18 @@ async def fetch_info(replied_user, event):
     user_bio = "This User has no About" if not user_bio else user_bio
 
     caption = "<b>USER INFO:</b>\n\n"
-    caption += f"First Name: {first_name}\n"
-    caption += f"Last Name: {last_name}\n"
-    caption += f"Username: {username}\n"
+    caption += f"Randi's First Name: {first_name}\n"
+    caption += f"Randi's Last Name: {last_name}\n"
+    caption += f"Randi's Username: {username}\n"
     caption += f"Data Centre ID: {dc_id}\n"
-    caption += f"Number of Profile Pics: {replied_user_profile_photos_count}\n"
-    caption += f"Is Bot: {is_bot}\n"
-    caption += f"Is Restricted: {restricted}\n"
-    caption += f"Is Verified by Telegram: {verified}\n"
-    caption += f"ID: <code>{user_id}</code>\n\n"
-    caption += f"Bio: \n<code>{user_bio}</code>\n\n"
+    caption += f"Randi's Profile Pics: {replied_user_profile_photos_count}\n"
+    caption += f"Randi's Is Bot: {is_bot}\n"
+    caption += f"Randi's Restricted: {restricted}\n"
+    caption += f"Randi's Is Verified by Telegram: {verified}\n"
+    caption += f"Randi's ID: <code>{user_id}</code>\n\n"
+    caption += f"Randi's Bio: \n<code>{user_bio}</code>\n\n"
     caption += f"Common Chats with this user: {common_chat}\n"
-    caption += f"Permanent Link To Profile: "
+    caption += f"Randi's Link To Profile: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
 
     return photo, caption
